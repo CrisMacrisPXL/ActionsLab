@@ -1,0 +1,28 @@
+name: Steps Examples
+on:
+  workflow_dispatch: 
+
+jobs:
+  steps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Maak een nieuwe directory
+        run: |
+          mkdir -p testmachine
+      - name: output in een file zetten
+        run: |
+          uname -a > testmachine/output.txt
+      - name: ouput verificatie
+        run: |
+          echo "Verificatie van testmachine/output.txt:"
+          cat testmachine/output.txt
+      - name: verificatie directory listing
+        run: |
+          echo "Directory listing:"
+          ls -alhR
+          echo "Inhoud van testmachine/output.txt:"
+          cat testmachine/output.txt
+        
+      
+      
+     
