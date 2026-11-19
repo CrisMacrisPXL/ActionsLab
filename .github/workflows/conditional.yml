@@ -1,0 +1,19 @@
+name: conditionalex
+on: 
+    workflow_dispatch:
+      inputs:
+        environment:
+          description: "type of env"
+          required: true
+          type: choice
+          options: 
+            - development
+            - staging
+            - production
+
+jobs:
+  conditionals:
+    runs-on: ubuntu-latest
+    
+      
+
